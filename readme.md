@@ -4,13 +4,36 @@
 ```
 git clone https://github.com/jhernandez02/trivia-django.git
 ```
+
+## Crear y activar entorno virtual
+```
+cd trivia-django
+python -m venv myvenv
+myvenv\Scripts\activate
+```
+
 ### Instalación dependiencias
 ```
 pip install -r requirements.txt
 ```
+
 ### Levantar el proyecto
 ```
 python manage.py runserver
+```
+## Instalación con Docker
+
+#### Construir la imagen:
+```
+docker-compose build
+```
+#### Iniciar los servicios:
+```
+docker-compose up
+```
+#### Migrar la base de datos:
+```
+docker-compose exec web python manage.py migrate
 ```
 
 ## Usuarios de Prueba
